@@ -107,7 +107,6 @@
 	[segmentedControl addTarget:self
                          action:@selector(segmentAction:)
                forControlEvents:UIControlEventValueChanged];
-	segmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
 	segmentedControl.selectedSegmentIndex = 1;
     segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     
@@ -137,7 +136,6 @@
 	[segmentedControl addTarget:self
                          action:@selector(segmentAction:)
                forControlEvents:UIControlEventValueChanged];
-	segmentedControl.segmentedControlStyle = UISegmentedControlStyleBordered;
 	segmentedControl.selectedSegmentIndex = 1;
 	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     
@@ -162,7 +160,6 @@
 	[segmentedControl addTarget:self
                          action:@selector(segmentAction:)
                forControlEvents:UIControlEventValueChanged];
-	segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
 	segmentedControl.selectedSegmentIndex = 1;
 	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     
@@ -187,7 +184,6 @@
 	[segmentedControl addTarget:self
                          action:@selector(segmentAction:)
                forControlEvents:UIControlEventValueChanged];
-	segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;	
 	segmentedControl.tintColor = [UIColor colorWithRed:0.70 green:0.171 blue:0.1 alpha:1.0];
 	segmentedControl.selectedSegmentIndex = 1;
 	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
@@ -213,7 +209,6 @@
     [segmentedControl addTarget:self
                          action:@selector(segmentAction:)
                forControlEvents:UIControlEventValueChanged];
-    segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;	
     segmentedControl.selectedSegmentIndex = 1;
     segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     
@@ -226,14 +221,6 @@
                     rightSegmentState:UIControlStateNormal
                            barMetrics:UIBarMetricsDefault];
     
-    // we want attributed strings for this segmented control
-    NSDictionary *textAttributes = @{ UITextAttributeTextColor:[UIColor blueColor],
-                                      UITextAttributeFont:[UIFont systemFontOfSize:13.0] };
-    [segmentedControl setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
-    
-    textAttributes = @{ UITextAttributeTextColor:[UIColor redColor],
-                        UITextAttributeFont:[UIFont systemFontOfSize:13.0] };
-    [segmentedControl setTitleTextAttributes:textAttributes forState:UIControlStateHighlighted];
     
     [self.scrollView addSubview:segmentedControl];
 }

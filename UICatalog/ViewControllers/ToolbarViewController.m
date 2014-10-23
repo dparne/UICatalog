@@ -125,8 +125,6 @@
     UIImage *baseImage = [UIImage imageNamed:@"whiteButton"];
     UIImage *backroundImage = [baseImage stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
     [customItem1 setBackgroundImage:backroundImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    NSDictionary *textAttributes = @{ UITextAttributeTextColor:[UIColor blackColor] };
-    [customItem1 setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
     
     // create a bordered style button with custom title
 	UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc] initWithTitle:@"Item2"

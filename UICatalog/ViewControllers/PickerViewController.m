@@ -250,9 +250,9 @@ const CGFloat kOptimumPickerWidth = 320;
 			[self showPicker:self.myPickerView];
             
             // report the selection to the UI label
-            self.label.text = [NSString stringWithFormat:@"%@ - %d",
+            self.label.text = [NSString stringWithFormat:@"%@ - %ld",
                                [self.pickerViewArray objectAtIndex:[self.myPickerView selectedRowInComponent:0]],
-                               [self.myPickerView selectedRowInComponent:1]];
+                               (long)[self.myPickerView selectedRowInComponent:1]];
 			break;
 		}
 		case 1: // UIDatePicker
@@ -323,9 +323,9 @@ const CGFloat kOptimumPickerWidth = 320;
 	if (pickerView == self.myPickerView)	// don't show selection for the custom picker
 	{
 		// report the selection to the UI label
-		self.label.text = [NSString stringWithFormat:@"%@ - %d",
+		self.label.text = [NSString stringWithFormat:@"%@ - %ld",
 						[self.pickerViewArray objectAtIndex:[pickerView selectedRowInComponent:0]],
-						[pickerView selectedRowInComponent:1]];
+						(long)[pickerView selectedRowInComponent:1]];
 	}
 }
 
